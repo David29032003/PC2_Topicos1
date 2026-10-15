@@ -1,0 +1,21 @@
+TAREA
+Convierte la NECESIDAD en una consulta breve para buscar fragmentos de fichas de procesos de contratación. No respondas la necesidad: solo escribe la consulta.
+
+NECESIDAD
+{necesidad}
+
+CONTEXTO
+El buscador compara la consulta con fragmentos de fichas OCDS del SEACE. Cada ficha contiene: convocatoria, ítems (texto del requerimiento), cronograma, documentos publicados, postores, buena pro y contratos.
+
+INTENCIONES POSIBLES
+- marca_sin_equivalente: se exige una marca o un modelo sin aceptar equivalentes
+- marca_con_equivalente: se menciona una marca pero se acepta "o equivalente"
+- compatibilidad_equipo_existente: insumos, repuestos o servicios para un equipo que la entidad ya tiene
+- competencia: número de postores o participación en el proceso
+- resultado_adjudicacion: ganador, monto adjudicado o contrato
+- otro: ninguna de las anteriores
+
+FORMATO DE SALIDA
+Devuelve solo un objeto JSON con exactamente estas claves:
+{"query": "<consulta de 4 a 25 palabras en español>", "intent": "<una de las intenciones posibles>", "abstain": <true si la necesidad no se puede buscar en estas fichas, false si se puede>}
+No escribas nada fuera del JSON.

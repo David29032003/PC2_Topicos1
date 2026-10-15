@@ -1,0 +1,106 @@
+{
+  "exp2": {
+    "small": {
+      "target_words": 100,
+      "Recall@1": 0.0,
+      "Recall@3": 0.2,
+      "Recall@5": 0.3
+    },
+    "baseline": {
+      "target_words": 180,
+      "Recall@1": 0.3,
+      "Recall@3": 0.467,
+      "Recall@5": 0.533
+    },
+    "large": {
+      "target_words": 320,
+      "Recall@1": 0.3,
+      "Recall@3": 0.4,
+      "Recall@5": 0.467
+    }
+  },
+  "faiss_vs_numpy": {
+    "small": {
+      "mismo_orden": true,
+      "max_dif_score": 2.384185791015625e-07,
+      "mismos_conjuntos": true
+    },
+    "baseline": {
+      "mismo_orden": true,
+      "max_dif_score": 1.1920928955078125e-07,
+      "mismos_conjuntos": true
+    },
+    "large": {
+      "mismo_orden": true,
+      "max_dif_score": 2.384185791015625e-07,
+      "mismos_conjuntos": true
+    }
+  },
+  "chunks": {
+    "small": {
+      "target_words": 100,
+      "n_chunks": 36,
+      "palabras_media": 79.5,
+      "palabras_max": 100,
+      "tokens_max": 236,
+      "tokens_media": 162.4,
+      "cortes_por_tokens": 0,
+      "chunks_sin_solape": 1,
+      "dim": 384,
+      "normas_L2": [
+        1.0,
+        1.0
+      ]
+    },
+    "baseline": {
+      "target_words": 180,
+      "n_chunks": 18,
+      "palabras_media": 137.2,
+      "palabras_max": 180,
+      "tokens_max": 365,
+      "tokens_media": 276.4,
+      "cortes_por_tokens": 0,
+      "chunks_sin_solape": 0,
+      "dim": 384,
+      "normas_L2": [
+        1.0,
+        1.0
+      ]
+    },
+    "large": {
+      "target_words": 320,
+      "n_chunks": 13,
+      "palabras_media": 178.8,
+      "palabras_max": 257,
+      "tokens_max": 502,
+      "tokens_media": 357.2,
+      "cortes_por_tokens": 3,
+      "chunks_sin_solape": 0,
+      "dim": 384,
+      "normas_L2": [
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "exp1": {
+    "n_necesidades": 5,
+    "json_exacto_rate": 0.0,
+    "json_parseable_rate": 1.0,
+    "schema_valid_rate": 1.0,
+    "intent_accuracy": 0.6,
+    "abstain_rate": 0.0,
+    "adecuada_rate": 0.6,
+    "Q0": {
+      "Recall@1": 0.3,
+      "Recall@3": 0.467,
+      "Recall@5": 0.533
+    },
+    "Q1": {
+      "Recall@1": 0.3,
+      "Recall@3": 0.467,
+      "Recall@5": 0.533
+    },
+    "jaccard_top3_medio": 0.9
+  }
+}

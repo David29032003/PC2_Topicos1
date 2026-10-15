@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "consulta.schema.json",
+  "title": "Consulta estructurada para el recuperador denso (PC2 CC0F4)",
+  "description": "Salida del LLM en la PC2. 'query' es el texto que recibe el encoder con el prefijo 'query: '. La validez estructural no garantiza que la consulta conserve la necesidad: eso se mide con la intención esperada y con Recall@k.",
+  "type": "object",
+  "properties": {
+    "query": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 300
+    },
+    "intent": {
+      "type": "string",
+      "enum": ["marca_sin_equivalente", "marca_con_equivalente", "compatibilidad_equipo_existente",
+               "competencia", "resultado_adjudicacion", "otro"]
+    },
+    "abstain": {
+      "type": "boolean"
+    }
+  },
+  "required": ["query", "intent", "abstain"],
+  "additionalProperties": false
+}
